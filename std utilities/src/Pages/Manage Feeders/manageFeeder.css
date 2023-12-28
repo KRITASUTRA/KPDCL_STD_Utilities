@@ -1,0 +1,135 @@
+
+.edit-panel{
+    position: fixed;
+    left: 20%;
+    top: 10;
+    height: 25rem;
+    width: 58rem;
+    background-color: #ffffff;
+    padding: 20px;
+    overflow: auto;
+    z-index: 50;
+    border-radius: 20px;
+    border-color: #d9d9d9;
+    border-width: 2px;
+    border-style: solid;
+  }
+  
+  .edit-panel.open{
+    transform: translateY(0);
+  }
+    
+  .edit-rst-container{
+    flex-direction: column;
+  
+  }
+  
+  .edit-rs{
+    height: 30px;
+  }
+  
+  .hr-line {
+    border-top: 1px solid #7f7f7f; 
+    width: 100%; 
+    margin-top: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  
+  .editSubmit-btn {
+    margin-left: 34rem;
+    margin-top: 2rem; 
+    background-color: rgb(96, 215, 96);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 8rem;
+    padding: 5px 5px;
+  }
+  .editCancel-btn{
+   margin-left: 1rem;
+   margin-top: 2rem;
+   background-color: red;
+   color: white;
+   border: none;
+   border-radius: 5px;
+    width: 5rem;
+    padding: 5px 5px;
+  }
+  
+  .edit-panel-2{
+    position: fixed;
+    left: 30%;
+    top: 10;
+    height: 21rem;
+    width: 40rem;
+    background-color: #ffffff;
+    padding: 20px;
+    overflow: auto;
+    z-index: 50;
+    border-radius: 20px;
+    border-color: #d9d9d9;
+    border-width: 2px;
+    border-style: solid;
+  }
+  
+  .editSubmit-btn2 {
+    margin-left: 20rem;
+    margin-top: 2rem; 
+    background-color: rgb(96, 215, 96);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 8rem;
+    padding: 5px 5px;
+  }
+  .editCancel-btn2{
+   margin-left: 1rem;
+   margin-top: 2rem;
+   background-color: red;
+   color: white;
+   border: none;
+   border-radius: 5px;
+    width: 5rem;
+    padding: 5px 5px;
+  }
+  
+  .input-edit-feeder{
+    width: 12rem;
+    height: 2rem;
+    border-radius: 7px;
+  }
+
+  .select1{
+    width: 361px;
+    height: 40px;
+    border-radius: 7px;
+  }
+  .select-adding{
+    width: 10rem;
+    height: 2rem;
+    border-radius: 7px;
+    border-width: initial;
+
+  }
+
+  .input-new-feeder{
+    width: 10rem;
+    height: 2rem;
+    border-radius: 7px;
+    border-width: initial;
+
+  }
+  
+  .add-feeder-btn{
+    background-color: #138FD5;
+    border: none;
+    border-radius: 7px;
+    border-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    height: 40px;
+    width: 130px;
+    color: white;
+    align-items: center;
+  }

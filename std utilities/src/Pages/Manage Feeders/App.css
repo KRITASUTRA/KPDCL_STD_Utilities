@@ -1,0 +1,297 @@
+body {
+  font-family: "Open Sans, sans-serif";
+  background: #ECF2F5;
+  margin: 0;
+  line-height: inherit;
+}
+
+text{
+  font-weight: bold;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  justify-content: space-between;
+  display: flex;
+            width: 97.7vw;
+  height: 3.5rem; 
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.75rem; 
+  border-bottom: 1px solid #e2e8f0; 
+  background-color: #ffffff; 
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
+}
+.menu-btn{
+  align-items: center;
+  justify-content: center;
+    border: none;
+    background-color: #ffffff;
+  font-size: 35px;
+}
+
+.header-heading{
+  margin-right: auto;
+}
+
+.profile-btn{
+  align-items: center;
+  justify-content: center;
+    border: none;
+    background-color: #ffffff;
+  font-size: 35px;
+  border-radius: 25px;
+}
+
+.search-container {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f7fe;
+  border-radius: 50px;
+  padding: 2px 20px;
+  height: 10%;
+}
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 10px;
+  align-items: center;
+  background-color: #f4f7fe;
+
+}
+
+.search-icon {
+  margin-right: 10px;
+}
+
+.adding-feeder-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 40px;
+    margin-top: 80px;
+}
+
+.new-feeder-ddn{
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  height: 85px;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-left: 55px;
+}
+
+.Blank{
+  padding-top: 10px;
+}
+
+.feeder-select{
+  width: 300px;
+  height: 40px;
+  border-radius: 7px;
+  border-width: initial;
+}
+
+.add-feeder-btn{
+  /* background-color: #138FD5;
+  border: none;
+  border-radius: 7px;
+  border-color: #000000;
+  border-width: 1px;
+  border-style: solid;
+  height: 40px;
+  width: 130px;
+  color: white;
+  align-items: center; */
+  background-color: #138FD5;
+  border-radius: 7px;
+  border: 1px solid #0d679b;
+  width: max-content;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  align-items: center;
+  color: white;
+  margin-left:  0px;
+  padding: 10px 20px;
+}
+
+.station-management-btn{
+  background-color: #138FD5;
+  border-radius: 7px;
+  border: 1px solid #0d679b;
+  width: max-content;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  align-items: center;
+  color: white;
+  margin-left: 90px;
+  padding: 10px 20px;
+}
+
+.feederList-heading{
+  display: flex;
+  flex-direction: row;  
+}
+
+.list-heading{
+  margin-left: 70px;  
+}
+
+.download-btn{
+  width: 110px;
+  height: 20px;
+  margin-top: 20px;
+  margin-left: 73rem;
+  background-color: #d9d9d9;
+}
+
+                                                            /* Recieving station*/
+.recievingStation-h{
+  margin-left: 65px;
+}
+
+.adding-recieving-station {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  height: 85px;
+  width: 85rem;
+  align-items: center;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-left: 55px;
+}
+
+.rst-input{
+  border-radius: 6px;
+  border-width: 1px;
+  height: 25px;
+  width: 18rem;
+}
+
+.add-rst-btn{
+  background-color: #138FD5;
+  border: none;
+  border-radius: 7px;
+  border-color: #000000;
+  border-width: 1px;
+  border-style: solid;
+  height: 25px;
+  width: 120px;
+  color: white;
+  align-items: center;
+  margin-left: 10rem;
+}
+
+.download-btn2{
+  width: 98px;
+  height: 20px;
+  margin-top: 30px;
+  margin-left: 82rem;
+  background-color: #d9d9d9;
+  margin-bottom: 30px;
+}
+
+
+                                                            /* Table*/
+
+table{
+   padding: 10px;
+   border-radius: 8px;
+   background-color: #ffffff;
+ 
+   width: 94%;
+}
+
+th{
+  background-color: #7F56D8;
+  color: #ffffff;
+}
+
+td{
+text-align: center;}
+
+                                                                        /* Left Drawer css*/
+
+.left-drawer {
+  position: fixed;
+  top: 0;
+  left: -300px; 
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+}
+
+.left-drawer.open {
+  left: 0; /* Display the drawer */
+}
+
+.drawer-content {
+  padding: 16px;
+}
+
+                                                          /*css for side panel */
+
+.left-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  overflow: auto;
+  z-index: 50;
+}
+
+.left-menu .close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+}
+
+.home-btn{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+}
+
+.left-menu ul {
+  list-style-type: none;
+  padding: 50px 0;
+}
+
+.left-menu ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.left-menu ul li:last-child {
+  border-bottom: none;
+}
+ 
+/*pop up */
+
