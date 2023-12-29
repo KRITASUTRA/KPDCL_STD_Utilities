@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Switch from 'react-switch';
 
+
 const PowerToggle = () => {
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(true);
 
     const handleChange = (isChecked) => {
         setChecked(isChecked);

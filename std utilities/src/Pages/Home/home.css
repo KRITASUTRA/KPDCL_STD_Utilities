@@ -1,0 +1,33 @@
+/* Add some basic styling to the tabs container */
+.tabs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* create two columns of equal width */
+  grid-gap: 20%; /* add some space between the tabs */
+  margin: 10px; /* add some margin around the container */
+  align-items: center; /* center the tabs vertically */
+  justify-items: center; /* center the tabs horizontally */
+
+}
+
+/* Add some basic styling to the tab component */
+.tab {
+  padding: 10px; /* add some padding inside the tab */
+  border: 1px solid black; /* add a black border around the tab */
+  border-radius: 10px; /* make the corners slightly rounded */
+  background-color: white; /* set the background color to white */
+  opacity: 0.8; /* make the tab semi-transparent */
+  cursor: pointer; /* change the cursor to a pointer when hovering over the tab */
+}
+
+/* Add some styling to the active tab */
+.tab.active {
+  opacity: 1; /* make the active tab fully opaque */
+  font-weight: bold; /* make the text bold */
+  box-shadow: 0 0 10px black; /* add a shadow effect */
+}
+
+/* Add some styling to the tab content */
+.tab-content {
+  padding: 20px; /* add some padding inside the content */
+  font-size: 18px; /* increase the font size */
+}
