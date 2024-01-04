@@ -2,36 +2,36 @@ import { IonIcon } from "@ionic/react";
 import React, { useState } from "react";
 import { create, menu, person, search, trash } from "ionicons/icons";
 import EditPanel from "./editPanel";
+import "./Manage-feeder.css";
 import "./manageFeeder.css";
-import "./App.css";
 import Layout from "../../Components/Layout/Layout";
 import AddRST from "./addrst";
 import EditFeeder from "./edit-rst";
  
 const ManageFeeder = ({title}) => {
-  const [isAddOpen, setIsAddOpen] = useState(false);
-  const [isEditOpen, setIsEditOpen] = useState(false);
-  
-  const handleEditClick = () => {
-    setIsEditOpen(true);
-  };
+                                                                        // const [isAddOpen, setIsAddOpen] = useState(false);
+                                                                        // const [isEditOpen, setIsEditOpen] = useState(false);
+                                                                        
+                                                                        // const handleEditClick = () => {
+                                                                        //   setIsEditOpen(true);
+                                                                        // };
 
-  const handleAddClick = () => {
-    setIsAddOpen(true);
-  }
-  
-  const handleCloseClick = () => {
-    setIsEditOpen(false);
-    setIsAddOpen(false);
-  };
+                                                                        // const handleAddClick = () => {
+                                                                        //   setIsAddOpen(true);
+                                                                        // }
+                                                                        
+                                                                        // const handleCloseClick = () => {
+                                                                        //   setIsEditOpen(false);
+                                                                        //   setIsAddOpen(false);
+                                                                        // };
 
 
   return (
     <Layout title={title}>
       <div className="adding-feeder-container ">
-        {isEditOpen && <EditPanel onClose={handleCloseClick} />}
-        {isAddOpen && <AddRST onClose={handleCloseClick} />}
-        {isEditOpen && <EditFeeder onClose={handleCloseClick} />}
+                                                                        {/* {isEditOpen && <EditPanel onClose={handleCloseClick} />}
+                                                                        {isAddOpen && <AddRST onClose={handleCloseClick} />}
+                                                                        {isEditOpen && <EditFeeder onClose={handleCloseClick} />} */}
         <div className="new-feeder-ddn ">
           <div style={{ marginLeft: "20px" }}>
             {" "}
@@ -52,23 +52,35 @@ const ManageFeeder = ({title}) => {
               <option>STD1 Srinagar</option>
             </select>
           </div>
-          <div style={{ marginLeft: "80px", marginRight: "50px" }}>
-            <br />
-          
-            <button className='add-feeder-btn'
-          onClick={handleAddClick}>
-            Add New Feeder
-          </button>
-          </div>
-        </div>
-        <div>
-          <a href="/receiving-station" style={{textDecoration:'none' }}>
+
+          <div style={{ marginLeft: "80px" }}>
             {" "}
-            <button className="station-management-btn">
-              Manage Recieving Station{" "}
-            </button>{" "}
-          </a>
+            Feeder<br />
+            <div className="Blank"></div>
+            <select className="feeder-select">
+              <option>STD1 Srinagar</option>
+              <option>STD1 Srinagar</option>
+            </select>
         </div>
+                                                            {/* <div style={{ marginLeft: "80px", marginRight: "50px" }}>
+                                                              <br />
+                                                            
+                                                              <button className='add-feeder-btn'
+                                                            onClick={handleAddClick}>
+                                                              Add New Feeder
+                                                           </button>
+                                                            </div> */}
+
+           </div>
+
+                                                            {/* <div>
+                                                              <a href="/receiving-station" style={{textDecoration:'none' }}>
+                                                                {" "}
+                                                                <button className="station-management-btn">
+                                                                  Manage Recieving Station{" "}
+                                                                </button>{" "}
+                                                              </a>
+                                                            </div> */}
       </div>
 
       <main>
@@ -103,7 +115,7 @@ const ManageFeeder = ({title}) => {
                   Rural Share <br /> [%]
                 </th>
                 <th>Prime Month</th>
-                <th> Action</th>
+                {/* <th> Action</th> */}
               </tr>
               <tr>
                 <td>1</td>
@@ -115,15 +127,15 @@ const ManageFeeder = ({title}) => {
                 <td>0</td>
                 <td>0</td>
                 <td>2023-05-01</td>
-                <td>
-                  {" "}
-                  <IonIcon
-                  icon={create}
-                  className="create-icon"
-                  onClick={handleEditClick}
-                />
-                  <IonIcon icon={trash} className="trash-icon" />{" "}
-                </td>
+                                                                      {/* <td>
+                                                                        {" "}
+                                                                        <IonIcon
+                                                                        icon={create}
+                                                                        className="create-icon"
+                                                                        onClick={handleEditClick}
+                                                                      />
+                                                                        <IonIcon icon={trash} className="trash-icon" />{" "}
+                                                                      </td> */}
               </tr>
             </thead>
           </table>

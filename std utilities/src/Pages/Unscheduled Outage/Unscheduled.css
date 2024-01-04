@@ -148,3 +148,15 @@
   font-weight: 300;
 
 }
+
+.expandable-content {
+  display: flex;
+  flex-direction: row;
+  border: 1px  #ddd;
+
+}
+
+.expandable-content div {
+margin-left: 40px;
+
+}

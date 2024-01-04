@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Layout from "../../Components/Layout/Layout";
 import "./PumpEnergy.css";
+import Paper from "@mui/material/Paper";
+
 import {
   Button,
   FormControl,
@@ -79,6 +81,20 @@ const mainTableData = [
     date: "12/12/2023",
     duration: "5 mins",
   },
+  {
+    id: 1,
+    OID: "2262146",
+    feeder_name: "Nai Sarak: F1",
+    date: "12/12/2023",
+    duration: "5 mins",
+  },
+  {
+    id: 1,
+    OID: "2262146",
+    feeder_name: "Nai Sarak: F1",
+    date: "12/12/2023",
+    duration: "5 mins",
+  },
 ];
 
 const PumpEnergy = ({ title }) => {
@@ -89,8 +105,6 @@ const PumpEnergy = ({ title }) => {
     setAge(event.target.value);
   };
 
-  
-
   return (
     <Layout title={title}>
       <div className="pump-container">
@@ -98,9 +112,14 @@ const PumpEnergy = ({ title }) => {
           <Stack className="left-pump-form">
             <Stack direction="row" spacing={6} marginBottom={0}>
               <Stack width={"40%"}>
-                <InputLabel style={{marginBottom:"2px"}}>Sub Division</InputLabel>
+                <InputLabel style={{ marginBottom: "2px" }}>
+                  Sub Division
+                </InputLabel>
                 <FormControl fullWidth>
-                  <Select onChange={handleChange} style={{borderRadius:'15px', height:'60%'}}>
+                  <Select
+                    onChange={handleChange}
+                    style={{ borderRadius: "10px", height: "60%" }}
+                  >
                     <MenuItem value={10}>Ten</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
                     <MenuItem value={30}>Thirty</MenuItem>
@@ -108,9 +127,12 @@ const PumpEnergy = ({ title }) => {
                 </FormControl>
               </Stack>
               <Stack width={"40%"}>
-                <InputLabel >Receiving Station</InputLabel>
+                <InputLabel>Receiving Station</InputLabel>
                 <FormControl fullWidth>
-                  <Select onChange={handleChange} style={{borderRadius:'15px', height:'60%'}}>
+                  <Select
+                    onChange={handleChange}
+                    style={{ borderRadius: "10px", height: "60%" }}
+                  >
                     <MenuItem value={10}>Ten</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
                     <MenuItem value={30}>Thirty</MenuItem>
@@ -122,19 +144,22 @@ const PumpEnergy = ({ title }) => {
               <Stack width={"40%"}>
                 <InputLabel>Feeders</InputLabel>
                 <FormControl fullWidth>
-                  <Select onChange={handleChange} style={{borderRadius:'15px', height:'60%'}}>
+                  <Select
+                    onChange={handleChange}
+                    style={{ borderRadius: "10px", height: "60%" }}
+                  >
                     <MenuItem value={10}>Ten</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
                     <MenuItem value={30}>Thirty</MenuItem>
                   </Select>
                 </FormControl>
               </Stack>
-              <Stack width={"40%"}>
+              {/* <Stack width={"40%"}>
                 <InputLabel>Month and Year</InputLabel>
                 <Stack direction="row" spacing={1} width={"100%"}>
                   <Stack width={"45%"}>
                     <FormControl fullWidth>
-                      <Select onChange={handleChange} style={{borderRadius:'15px', height:'60%'}}>
+                      <Select onChange={handleChange} style={{borderRadius:'10px', height:'60%'}}>
                         <MenuItem value={10}>Ten</MenuItem>
                         <MenuItem value={20}>Twenty</MenuItem>
                         <MenuItem value={30}>Thirty</MenuItem>
@@ -143,7 +168,7 @@ const PumpEnergy = ({ title }) => {
                   </Stack>
                   <Stack width={"40%"}>
                     <FormControl fullWidth>
-                      <Select onChange={handleChange} style={{borderRadius:'15px', height:'60%'}}>
+                      <Select onChange={handleChange} style={{borderRadius:'10px', height:'60%'}}>
                         <MenuItem value={10}>Ten</MenuItem>
                         <MenuItem value={20}>Twenty</MenuItem>
                         <MenuItem value={30}>Thirty</MenuItem>
@@ -151,17 +176,37 @@ const PumpEnergy = ({ title }) => {
                     </FormControl>
                   </Stack>
                 </Stack>
+              </Stack> */}
+              <Stack width={"40%"}>
+                <InputLabel>Date</InputLabel>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    slotProps={{
+                      field: {
+                        clearable: true,
+                      },
+                      textField: {
+                        InputProps: {
+                          sx: { borderRadius:2.5, height: "66%",fontSize:12 }, // Adjust the height value as needed
+                        },
+                      },
+                    }}
+                  />
+                </LocalizationProvider>
               </Stack>
             </Stack>
             <Stack direction="row" spacing={6}>
-              <Stack width={"40%"} >
-                <InputLabel >Total Supply</InputLabel>
-                <TextField  style={{borderRadius:'15px', height:'60%'}}  placeholder="           KW" />
+              <Stack className="customTextField" style={{ width: "40%" }}>
+                <InputLabel>Total Supply</InputLabel>
+                <input className="customInput" placeholder="" />
               </Stack>
-              <Stack width={"40%"}>
-                <InputLabel>Supply Unit in KW </InputLabel>
+              <Stack style={{ width: "40%" }}>
+                <InputLabel>Supply Unit in KW</InputLabel>
                 <FormControl fullWidth>
-                  <Select onChange={handleChange} >
+                  <Select
+                    style={{ borderRadius: "10px", height: "60%" }}
+                    onChange={handleChange}
+                  >
                     <MenuItem value={10}>Ten</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
                     <MenuItem value={30}>Thirty</MenuItem>
@@ -169,47 +214,33 @@ const PumpEnergy = ({ title }) => {
                 </FormControl>
               </Stack>
             </Stack>
-            <Stack direction="row" spacing={6}>
-  <Stack width={"40%"} >
-    <InputLabel>Date</InputLabel>
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker 
-        sx={{ 
-          width: 180,
-          borderRadius: '8px'
-        }}
-        slotProps={{
-          field: {
-            clearable: true,
-          },
-        }}
-      />
-    </LocalizationProvider>
-  </Stack>
-  <Stack width={"40%"}>
-    <InputLabel>Time</InputLabel>
-    <Stack direction="row" spacing={1}>
-      <Stack>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <TimePicker 
-            sx={{
-              borderRadius: 8, // Set the desired border-radius value
-            }}
-          />
-        </LocalizationProvider>
-      </Stack>
-      <Stack>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <TimePicker 
-            sx={{
-              borderRadius: 8, // Set the desired border-radius value
-            }}
-          />
-        </LocalizationProvider>{" "}
-      </Stack>
-    </Stack>
-  </Stack>
-</Stack>
+
+            {/* <Stack direction="row" spacing={6}>
+                                                                            
+                                                                              <Stack width={"40%"}>
+                                                                                <InputLabel>Time</InputLabel>
+                                                                                <Stack direction="row" spacing={1}>
+                                                                                  <Stack>
+                                                                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                                                                      <TimePicker 
+                                                                                        sx={{
+                                                                                          borderRadius: 8, // Set the desired border-radius value
+                                                                                        }}
+                                                                                      />
+                                                                                    </LocalizationProvider>
+                                                                                  </Stack>
+                                                                                  <Stack>
+                                                                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                                                                      <TimePicker 
+                                                                                        sx={{
+                                                                                          borderRadius: 8, // Set the desired border-radius value
+                                                                                        }}
+                                                                                      />
+                                                                                    </LocalizationProvider>{" "}
+                                                                                  </Stack>
+                                                                                </Stack>
+                                                                              </Stack>
+                                                                            </Stack> */}
 
             <Stack width={120} margin={"20px auto 0 auto"}>
               <Button variant="contained">Submit</Button>
@@ -217,24 +248,16 @@ const PumpEnergy = ({ title }) => {
           </Stack>
         </div>
 
-       
         <div className="right-pump-container">
           <div className="right-pump-table-wrapper">
             <table className="right-custom-table">
               <thead>
-                <tr>
-                
-                <a style={{width:'10%', position: 'absolute', right: '0'}} href="/pump-table-view">View more </a>
-                
-                </tr>
-                <tr>
+                <tr className="header-of-table">
                   <th>Date</th>
                   <th>RST</th>
                   <th>Sub Division</th>
                   <th>Feeder</th>
-                  <th>
-                  KW 
-                  </th>
+                  <th>KW</th>
                 </tr>
               </thead>
               <tbody>
@@ -249,6 +272,9 @@ const PumpEnergy = ({ title }) => {
                 ))}
               </tbody>
             </table>
+            <div className="view-more-container">
+              <a href="/pump-table-view">View more</a>
+            </div>
           </div>
         </div>
       </div>

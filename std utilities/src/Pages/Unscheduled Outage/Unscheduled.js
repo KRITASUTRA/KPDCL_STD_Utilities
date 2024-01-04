@@ -1,7 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Layout from "../../Components/Layout/Layout";
 import "./Unscheduled.css";
-
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button } from "@mui/material";
 import { Switch1, Switch0 } from "./Switches/Switch1";
@@ -40,89 +39,146 @@ const mainTableData = [
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 2,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 3,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 4,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 5,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 6,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 7,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 8,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 9,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 10,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
   {
-    id: 1,
+    id: 11,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
-  },
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
+  },  
   {
-    id: 1,
+    id: 12,
     OID: "2262146",
     feeder_name: "Nai Sarak: F1",
     date: "12/12/2023",
     duration: "5 mins",
+    reason: "Scheduled local containment",
+    offTime: "10:00",
+    onTime: "1:30",
+    entryTime: "2:10",
   },
 ];
 
 const Unscheduled = ({ title }) => {
   const [feederData, setFeederData] = useState(FeedersdefaultData);
   const [tableData, setTableData] = useState(mainTableData);
+  const [expandedRows, setExpandedRow] = useState(null);
+  const toggleRow = (id) => {
+    console.log("Clicked on row with id:", id);
+    setExpandedRow((prevExpandedRow) =>
+      prevExpandedRow === id ? null : id
+    );
+  };
+  
+ 
   return (
     <Layout title={title}>
       <div className="unsch-container">
@@ -178,23 +234,51 @@ const Unscheduled = ({ title }) => {
                   <th></th>
                 </tr>
               </thead>
+
               <tbody>
-                {tableData.map((item) => (
-                  <tr key={item.id}>
+              {tableData.map((item) => (
+                <React.Fragment key={item.id}>
+                  <tr>
                     <td>{item.id}</td>
                     <td>{item.OID}</td>
                     <td>{item.feeder_name}</td>
                     <td>{item.date}</td>
                     <td>{item.duration}</td>
                     <td style={{ width: 0 }}>
-                      <Button variant="outlined">Show</Button>
+                      <Button
+                        variant="outlined"
+                        onClick={() => toggleRow(item.id)}
+                      >
+                        Show
+                      </Button>
                     </td>
                     <td>
                       <RiDeleteBinLine />
                     </td>
                   </tr>
-                ))}
-              </tbody>
+                  {expandedRows === item.id && (
+                    <tr>
+                      <td colSpan="7">
+                        <div className="expandable-content">
+                          <div>
+                            <strong>Reason:</strong> <br/> {item.reason}
+                          </div>
+                          <div>
+                            <strong>Off time:</strong> <br/> {item.offTime}
+                          </div>
+                          <div>
+                            <strong>On time:</strong> <br/> {item.onTime}
+                          </div>
+                          <div>
+                            <strong>Entry time:</strong> <br/> {item.entryTime}
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </React.Fragment>
+              ))}
+            </tbody>
             </table>
           </div>
         </div>

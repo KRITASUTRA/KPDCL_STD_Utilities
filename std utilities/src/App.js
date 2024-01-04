@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./Pages/Manage Feeders/Manage-feeder.css";
 // Components
 import Home from "./Pages/Home/Home";
 import LogSide from "./Pages/Scheduled Outage/LogSide";
