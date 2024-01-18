@@ -90,3 +90,10 @@
   margin-top: 0rem;
   margin-bottom: 2rem;
 }
+
+.pump-feeder-select{
+  width: 150px;
+  height: 40px;
+  border-radius: 7px;
+  border-width: initial;
+}

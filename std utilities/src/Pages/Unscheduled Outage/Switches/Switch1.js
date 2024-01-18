@@ -1,6 +1,13 @@
-import React from "react";
-import { FormGroup, FormControlLabel, styled } from "@mui/material";
-import Switch from "@mui/material/Switch";
+import React, { useState } from "react";
+import {  FormGroup,
+  FormControlLabel,
+  styled,
+  Dialog,
+  DialogTitle,
+  DialogContent, } 
+          from "@mui/material";
+      import Switch from "@mui/material/Switch";
+import RstCut from "../RST_cut";
 
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -24,7 +31,7 @@ const IOSSwitch = styled((props) => (
         opacity: 0.5,
       },
     },
-    "&.Mui-focusVisible .MuiSwitch-thumb": {
+  "&.Mui-focusVisible .MuiSwitch-thumb": {
       color: "#33cf4d",
       border: "6px solid #fff",
     },
@@ -53,32 +60,44 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-const Switch1 = () => {
+
+const SwitchWithPopup = () => {
+  const [isSwitchOn, setIsSwitchOn] = useState(true);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleSwitchChange = () => {
+    setIsSwitchOn(!isSwitchOn);
+
+    // If the switch is turned on, open the popup
+    if (isSwitchOn) {
+      setIsPopupOpen(true);
+    }
+  };
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
-    <FormGroup>
-      <FormControlLabel
-        control={<IOSSwitch sx={{ ml:5 }} defaultChecked />}
-        label=""
-      />
-    </FormGroup>
+    <div>
+      <FormGroup>
+        <FormControlLabel
+          control={
+            <IOSSwitch
+              sx={{ ml: 5 }}
+              checked={isSwitchOn}
+              onChange={handleSwitchChange}
+            />
+          }
+          label=""
+        />
+      </FormGroup>
+      <Dialog open={isPopupOpen} onClose={handleClosePopup}>
+      <RstCut />
+        
+      </Dialog>
+    </div>
   );
 };
 
-// export default Switch1;
-
-const Switch0 = () => {
-  return (
-    <FormGroup>
-      <FormControlLabel
-        control={<IOSSwitch sx={{ m:2 }} defaultChecked />}
-        label=""
-      />
-    </FormGroup>
-  );
-};
-
-
-
-
-export { Switch1, Switch0, };
+export default SwitchWithPopup;
 

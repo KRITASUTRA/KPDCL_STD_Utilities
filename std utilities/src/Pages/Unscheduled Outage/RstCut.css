@@ -53,24 +53,8 @@
    color: white;
    border: none;
    border-radius: 5px;
-    width: 5rem;
-    padding: 5px 5px;
-  }
-  
-  .edit-panel-2{
-    position: fixed;
-    left: 30%;
-    top: 4px;
-    height: 21rem;
-    width: 40rem;
-    background-color: #ffffff;
-    padding: 20px;
-    overflow: auto;
-    z-index: 50;
-    border-radius: 20px;
-    border-color: #d9d9d9;
-    border-width: 2px;
-    border-style: solid;
+   width: 5rem;
+   padding: 5px 5px;
   }
   
   .editSubmit-btn2 {

@@ -13,6 +13,7 @@ function App() {
   return (
     <div>
       <Routes>
+       
         <Route path="/" element={<Home title="Home page" />} />
         <Route
           path="/scheduled-outage"
@@ -29,7 +30,6 @@ function App() {
         <Route path="/feeder-management" element={<FeederManagement title="Manage Feeder"/>}/>
         <Route path="/receiving-station" element={<StationManagement title="Manage Receiving Station"/>}/>
         <Route path="/pump-table-view" element={<PumpEnergyTable  title="Pump Energy"/>}/>
-
       </Routes>
     </div>
   );

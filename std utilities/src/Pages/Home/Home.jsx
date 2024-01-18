@@ -23,7 +23,6 @@ const Home = ({ title }) => {
         }}
       >
         <div className="tabs-container"> 
-          {/* Use Link from react-router-dom to navigate to different paths */}
           <Link to="/feeder-management">
             <Tab style={{marginTop: 200}} 
               label="Feeder Management"

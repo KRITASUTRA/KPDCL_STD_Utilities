@@ -8,6 +8,47 @@
     justify-items: center; /* center the tabs horizontally */
     padding: 100px 400px;
   }
+
+  @media (max-device-width: 480px) {
+    /* Styles for mobile devices */
+    .tabs-container {
+      margin: 10px;
+    }
+    .tabs-container select {
+      font-size: 14px;
+      color: blue;
+    }
+  }
+
+  @media (min-device-width: 481px) and (max-device-width: 768px) {
+    /* Styles for tablet devices */
+    .tabs-container {
+      margin: 15px;
+    }
+    .tabs-container ul {
+      display: flex;
+      justify-content: space-around;
+    }
+    .tabs-container li {
+      font-size: 16px;
+      color: green;
+    }
+  }
+
+  @media (min-device-width: 769px) {
+    /* Styles for desktop devices */
+    .tabs-container {
+      margin: 20px;
+    }
+    .vertical-tabs {
+      display: flex;
+      flex-direction: column;
+    }
+    .vertical-tabs a {
+      font-size: 18px;
+      color: red;
+    }
+  }
   
   /* Add some basic styling to the tab component */
   .MuiTab-root {
@@ -33,4 +74,5 @@
     padding: 30px; /* increase padding inside the content */
     font-size: 18px; /* increase the font size */
   }
+  
   

@@ -3,7 +3,7 @@ import Layout from "../../Components/Layout/Layout";
 import "./Unscheduled.css";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button } from "@mui/material";
-import { Switch1, Switch0 } from "./Switches/Switch1";
+import SwitchWithPopup from "./Switches/Switch1";
 
 const FeedersdefaultData = [
   {
@@ -183,13 +183,19 @@ const Unscheduled = ({ title }) => {
     <Layout title={title}>
       <div className="unsch-container">
         <div className="unsch-left-box">
-          <div className="unsch-receiving-station">
-            <h3>Receving Station</h3>
-            <div>
-              <input placeholder="Babar Shah" />
-              <Switch0 />
-            </div>
-          </div>
+        <div className="unsch-receiving-station">
+        <div>
+          <h3>Sub Division</h3>
+          <input placeholder="Babar Shah" />
+        </div>
+        <div>
+          <h3>Receiving Station</h3>
+          <input placeholder="Babar Shah" />
+          <SwitchWithPopup />
+        </div>
+      </div>
+      
+          
           <div className="unsch-feeder-table">
             <h3>Feeders</h3>
             <div className="table-container">
@@ -211,7 +217,7 @@ const Unscheduled = ({ title }) => {
                       <td>{item.description}</td>
                       <td>{item.receivingStation}</td>
                       <td>
-                        <Switch1 />
+                        <SwitchWithPopup />
                       </td>
                     </tr>
                   ))}
