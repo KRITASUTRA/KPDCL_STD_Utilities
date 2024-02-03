@@ -128,7 +128,7 @@ const PumpEnergy = ({ title }) => {
     setData({...data,kw:event.target.value});
     console.log('After kw:',data);
   };
-  const [value,setValue]=useState('');
+  // const [value,setValue]=useState('');
   const [subDivision, setSubDivision] = useState('');
   const [receivingStation, setReceivingStation] = useState([]);
 
@@ -158,7 +158,7 @@ const PumpEnergy = ({ title }) => {
   const handleClick=async()=>{
     try{
       console.log('After Click',data);
-      const response=await fetch('http://localhost:8080/api/pumpEnergy',{
+      const response=await fetch('http://172.18.2.96:8081/api/pumpEnergy',{
       method:'POST',
       headers:{
         'Content-Type': 'application/json', // Specify the content type if sending JSON data

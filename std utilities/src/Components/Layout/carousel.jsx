@@ -58,7 +58,7 @@ function CarouselToggle() {
                     }`}
                     onClick={() => handleTabClick(0)}
                 >
-                   Time Slot 1
+                12 o'clock midnight - 6AM
                 </button>
                 <button
                     className={`mr-2 px-4 py-2 focus:outline-none ${
@@ -66,7 +66,7 @@ function CarouselToggle() {
                     }`}
                     onClick={() => handleTabClick(1)}
                 >
-                    Time Slot 2
+                    6AM - 12 o'clock noon
                 </button>
                 <button
                     className={`mr-2 px-4 py-2 focus:outline-none ${
@@ -74,7 +74,7 @@ function CarouselToggle() {
                     }`}
                     onClick={() => handleTabClick(2)}
                 >
-                    Time Slot 3
+                12 o'clock noon - 6PM
                 </button>
                 <button
                     className={`px-4 py-2 focus:outline-none ${
@@ -82,7 +82,7 @@ function CarouselToggle() {
                     }`}
                     onClick={() => handleTabClick(3)}
                 >
-                    Time Slot 4
+                    6PM - 12 o'clock midnight
                 </button>
             </div>
 

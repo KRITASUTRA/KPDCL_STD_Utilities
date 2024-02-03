@@ -3,8 +3,8 @@ import Dropdown from './selectDrops';
 import PrintCurtailment from './printBtn';
 
 const DD = () => {
-    const subdivisionItems = ['Subdivision1', 'Subdivision2', 'Subdivision3', 'Subdivision4'];
-    const receivingStationItems = ['StationItem1', 'StationItem2', 'StationItem3'];
+    const subdivisionItems = ['SRINAGAR', 'BUDGAM', 'KUPWARA', 'Subdivision4'];
+    const receivingStationItems = ['BARBAR SHAH ','BASANT BAGH','BREINE','BUCHWARA','CENTAUR','FATEH KADAL','HARWAN','KAWDARA','KHAYAM','MUGHAL MASJID','NEDOUS','NISHAT','SHALIMAR'];
     const feederItems = ['Feeder1', 'Feeder2', 'Feeder3', 'Feeder4', 'Feeder5'];
 
     const [selectedSubdivision, setSelectedSubdivision] = React.useState(null);
@@ -18,7 +18,7 @@ const DD = () => {
                     SELECT SUBDIVISION:
                 </div>
                 <Dropdown
-                    label="Select Subdivision"
+                    label="Select One"
                     items={subdivisionItems}
                     onSelect={(item) => setSelectedSubdivision(item)}
                 />
@@ -28,7 +28,7 @@ const DD = () => {
                     SELECT RECEIVING STATION:
                 </div>
                 <Dropdown
-                    label="Select Receiving Station"
+                    label="Select One "
                     items={receivingStationItems}
                     onSelect={(item) => setSelectedReceivingStation(item)}
                 />
@@ -39,7 +39,7 @@ const DD = () => {
                     SELECT FEEDER:
                 </div>
                 <Dropdown
-                    label="Select Feeder"
+                    label="Select One"
                     items={feederItems}
                     onSelect={(item) => setSelectedFeeder(item)}
                 />
