@@ -27,7 +27,7 @@ const columns = [
   },
   { id: "code",
     label: "Sub\u00a0Division",
-    minWidth: 100,
+    minWidth: 170,
     align: "center" 
   },
   {
@@ -66,8 +66,8 @@ function createData(date, code, population, size) {
 }
 
 const rows = [
-  createData('12-12-2023',"India", "IN", 1324171354, 3287263),
-  createData('12-08-2023',"China", "CN", 1403500365, 9596961),
+  createData('12-12-2023',"India", "IN", 12-12-2023, 12-12-2023),
+  createData('12-08-2023',"Srinagar", "Ten", 12-12-2023, 9596961),
   createData('04-08-2023',"Italy", "Ten", 60483973, 301340),
   createData('29-07-2023',"United States", "US", 327167434, 9833520),
   createData('15-07-2023',"Canada", "CA", 37602103, 9984670),
@@ -122,6 +122,10 @@ function PumpEnergyTable({title}) {
     setPage(0);
   };
 
+  const [selectedDate, setSelectedDate] = React.useState(null);
+  const [selectedFromDate, setSelectedFromDate] = React.useState(null);
+  const [selectedToDate, setSelectedToDate] = React.useState(null);
+
   const handleViewButtonClick = () => {
     const selectElement = document.getElementById('subdivision');
     if (selectElement) {
@@ -131,11 +135,23 @@ function PumpEnergyTable({title}) {
   };
   
   const filteredRows = rows.filter((row) => {
-   
     const isSubDivisionMatch = !subDivision || row.code === subDivision;
     const isFeedersMatch = !feeders || row.population === feeders;
-    const isDateMatch = true; // Replace 'true' with your actual filtering condition.
-  
+
+    let isDateMatch = true;
+
+    if (dateRange === 'date') {
+      // Single date filter
+      isDateMatch = !selectedDate || row.date === selectedDate;
+    } else if (dateRange === 'range') {
+      // Date range filter
+      const rowDate = new Date(row.date);
+      const fromDate = new Date(selectedFromDate);
+      const toDate = new Date(selectedToDate);
+
+      isDateMatch = !selectedFromDate || !selectedToDate || (rowDate >= fromDate && rowDate <= toDate);
+    }
+
     // Return true only if all conditions match.
     return isSubDivisionMatch && isFeedersMatch && isDateMatch;
   });
@@ -184,14 +200,14 @@ function PumpEnergyTable({title}) {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              <MenuItem value={10}>Srinagar</MenuItem>
-              <MenuItem value={20}>Srinagar</MenuItem>
-              <MenuItem value={30}>Italy</MenuItem>
+              <MenuItem value={'Srinagar'}>Srinagar</MenuItem>
+              <MenuItem value={'Srinagar'}>Srinagar</MenuItem>
+              <MenuItem value={'Italy'}>Italy</MenuItem>
             </Select>
           </FormControl>
          </div>
           <div>
-          <InputLabel id="feeders-label">Feeders</InputLabel>
+          <InputLabel sx={{marginTop:"20px"}} id="feeders-label">Feeders</InputLabel>
           <FormControl variant="filled" sx={{width:'90%'}}>
             
             <Select
@@ -205,9 +221,9 @@ function PumpEnergyTable({title}) {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <MenuItem value={'Ten'}>Ten</MenuItem>
+              <MenuItem value={'IN'}>IN</MenuItem>
+              <MenuItem value={'US'}>US</MenuItem>
             </Select>
           </FormControl>
           </div>
