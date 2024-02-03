@@ -88,7 +88,7 @@
   }
   
   
-  .editSubmit-btn {
+  /* .editSubmit-btn {
     margin-left: 34rem;
     margin-top: 2rem; 
     background-color: rgb(96, 215, 96);
@@ -97,8 +97,8 @@
     border: none;
     width: 8rem;
     padding: 5px 5px;
-  }
-  .editCancel-btn{
+  } */
+  /* .editCancel-btn{
    margin-left: 1rem;
    margin-top: 2rem;
    background-color: red;
@@ -107,7 +107,7 @@
    border-radius: 5px;
     width: 5rem;
     padding: 5px 5px;
-  }
+  } */
   
   .edit-panel-2{
     position: fixed;
@@ -157,13 +157,12 @@
     height: 40px;
     border-radius: 7px;
   }
-  .select-adding{
+  /* .select-adding{
     width: 10rem;
     height: 2rem;
     border-radius: 7px;
     border-width: initial;
-
-  }
+  } */
 
   .input-new-feeder{
     width: 10rem;

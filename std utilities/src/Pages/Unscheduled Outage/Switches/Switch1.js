@@ -68,15 +68,20 @@ const SwitchWithPopup = () => {
   const handleSwitchChange = () => {
     setIsSwitchOn(!isSwitchOn);
 
-    // If the switch is turned on, open the popup
+    // Only open the popup when the switch is turned off
     if (isSwitchOn) {
       setIsPopupOpen(true);
     }
   };
+
   const handleClosePopup = () => {
     setIsPopupOpen(false);
   };
 
+  const handleTurnOffSwitch = () => {
+    setIsSwitchOn(false);
+    handleClosePopup();
+  };
   return (
     <div>
       <FormGroup>
@@ -92,8 +97,7 @@ const SwitchWithPopup = () => {
         />
       </FormGroup>
       <Dialog open={isPopupOpen} onClose={handleClosePopup}>
-      <RstCut />
-        
+        <RstCut onClose={handleClosePopup} onTurnOffSwitch={handleTurnOffSwitch} />
       </Dialog>
     </div>
   );

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import "./RstCut.css"
 
-const RstCut = ({ onClose }) => {
-  const [metered, setMetered] = useState('Yes');
-  const [essential, setEssential] = useState('No');
+const RstCut = ({ onClose, onTurnOffSwitch }) => {
+  const [metered, setMetered] = useState('');
+  const [, setEssential] = useState('No');
+  const [cutTime, setCutTime] = useState('');
+  const [cutDate, setCutDate] = useState('');
 
   const handleMeteredChange = (event) => {
     setMetered(event.target.value);
@@ -16,9 +18,13 @@ const RstCut = ({ onClose }) => {
   const handleChange = (event) => {
     setMetered(event.target.value);
   };
+  const handleTurnOff = () => {
+    // Additional logic if needed before turning off the switch
+    onTurnOffSwitch();
+  };
   
   return ( 
-    <div className="edit-panel-2">
+    <div className="edit-panel3">
       <strong >RST Cut</strong>
       <form>
       <div className="hr-line" />
@@ -27,23 +33,27 @@ const RstCut = ({ onClose }) => {
          
         <select className='select-adding' id="metered" value={metered} onChange={handleMeteredChange}>
               <option>Select Cut Reason</option>
-              <option value={"yes"}>Yes</option>
-              <option value={"no"}>No</option>
-            </select>
+              <option value={"Scheduled local containment"}>Scheduled local containment</option>
+              <option value={"Maintenance and Repairs"}>Maintenance and Repairs</option>
+              <option value={"Weather Conditions"}>Weather Conditions</option>
+              <option value={"Equipment Failure"}>Equipment Failure</option>
+        </select>
 
-            <div style={{width:"12rem", display:'flex',flexWrap:'wrap',flexDirection:'row'}}> <strong>Cut Time</strong> <br/>
-            <input className='input-new-feeder' type='time'  />
-            <input className='input-new-feeder' type='date' placeholder='DD/MM/YYYY' />
+            <div><strong>
+            Cut Time
+            </strong></div>
+
+            <div className='cut-time'>
+            <input className='input-new-feeder-time' type='time' id="meeting-time" placeholder="Select a time" />
+            <input className='input-new-feeder-date' type='date' placeholder='DD/MM/YYYY' />
             </div>
         </div>
          
       </div>
-      <div className="hr-line" />
+      <div className="hr-line submit-reason" />
         <button className='editCancel-btn' onClick={onClose}>Cancel</button>
-        <button type="submit" className='editSubmit-btn'>Turn Off</button> 
-        
-      </form>
-      
+        <button type="button" className='editSubmit-btn' onClick={handleTurnOff}>Turn Off</button>
+      </form>  
     </div>
   );
 };

@@ -123,7 +123,6 @@ function PumpEnergyTable({title}) {
   };
 
   const handleViewButtonClick = () => {
-    // You don't need to setSubDivision(subDivision) here.
     const selectElement = document.getElementById('subdivision');
     if (selectElement) {
       selectElement.value = subDivision;
@@ -132,11 +131,9 @@ function PumpEnergyTable({title}) {
   };
   
   const filteredRows = rows.filter((row) => {
-    // Add your filtering logic here based on subDivision, feeders, and date or date range.
+   
     const isSubDivisionMatch = !subDivision || row.code === subDivision;
     const isFeedersMatch = !feeders || row.population === feeders;
-  
-    // Add your date or date range filtering logic here.
     const isDateMatch = true; // Replace 'true' with your actual filtering condition.
   
     // Return true only if all conditions match.
@@ -163,18 +160,18 @@ function PumpEnergyTable({title}) {
             vertical: 'top',
             horizontal: 'center',
           }}
-          style={{ marginTop: '-10px' }}
+          style={{ marginTop: '-10px', width:'25rem'}}
         >
-        <Box sx={{ display:'flex', marginBottom: 2, flexWrap:'wrap',flexDirection:'column',padding:'15px 10px'}}> 
-          <div style={{flexDirection:columns, padding:"10px 10px"}}>
+        <Box sx={{ display:'flex', marginBottom: 2, flexWrap:'wrap',flexDirection:'column',padding:'0px 10px', }}> 
+          <div style={{flexDirection:columns, padding:"10px 50px"}}>
           <text>Filter</text>
-          <button onClick={handleClose} style={{color:'darkgreen',marginLeft:"40%"}}>
+          <button onClick={handleClose} style={{color:'darkgreen',marginLeft:"10rem"}}>
              Close</button>
           </div>
           <div className="hr-lin" />
           <div>
          <InputLabel id="subdivision-label">Sub Division</InputLabel>
-         <FormControl variant="filled" sx={{width:'40%'}}>
+         <FormControl variant="filled" sx={{width:'90%'}}>
             
             <Select
               labelId="subdivision-label"
@@ -195,7 +192,7 @@ function PumpEnergyTable({title}) {
          </div>
           <div>
           <InputLabel id="feeders-label">Feeders</InputLabel>
-          <FormControl variant="filled" sx={{width:'40%'}}>
+          <FormControl variant="filled" sx={{width:'90%'}}>
             
             <Select
               labelId="feeders-label"
@@ -215,15 +212,15 @@ function PumpEnergyTable({title}) {
           </FormControl>
           </div>
           <div>
-            <InputLabel id="daterange-label">Date </InputLabel>
+            <InputLabel id="daterange-label" sx={{ marginTop: 2}}>Date </InputLabel>
             <ToggleButtonGroup
               value={dateRange}
               exclusive
               onChange={handleChangeDateRange}
               aria-label="date range"
-              sx={{marginBottom: 1}}
+              style={{marginBottom: 2, marginTop: 1, width: 50}}
             >
-              <ToggleButton value="date" aria-label="date">
+              <ToggleButton value="date" aria-label="date" >
                 Date
               </ToggleButton>
               <ToggleButton value="range" aria-label="range">

@@ -168,6 +168,18 @@ const mainTableData = [
 ];
 
 const Unscheduled = ({ title }) => {
+  const [isSwitchOn, setIsSwitchOn] = useState(true);
+  const [showPopup, setShowPopup] = useState(false); // State to control the popup
+
+   const handleSwitchToggle = () => {
+    setIsSwitchOn((prevSwitchState) => !prevSwitchState);
+
+    // If the switch is turned off, show the popup
+    if (!isSwitchOn) {
+      setShowPopup(true);
+    }
+  };
+
   const [feederData, setFeederData] = useState(FeedersdefaultData);
   const [tableData, setTableData] = useState(mainTableData);
   const [expandedRows, setExpandedRow] = useState(null);
@@ -186,13 +198,14 @@ const Unscheduled = ({ title }) => {
         <div className="unsch-receiving-station">
         <div>
           <h3>Sub Division</h3>
-          <input placeholder="Babar Shah" />
+          <input placeholder="Srinagar" />
         </div>
         <div>
           <h3>Receiving Station</h3>
           <input placeholder="Babar Shah" />
-          <SwitchWithPopup />
+          
         </div>
+        <SwitchWithPopup isSwitchOn={isSwitchOn} onToggle={handleSwitchToggle} />
       </div>
       
           
