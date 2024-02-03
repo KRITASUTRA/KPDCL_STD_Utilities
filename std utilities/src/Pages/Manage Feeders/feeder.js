@@ -5,9 +5,7 @@ import "./Manage-feeder.css";
 import "./manageFeeder.css";
 import FileSaver from "file-saver";
 import Layout from "../../Components/Layout/Layout";
-// import AddRST from "./addrst";
-// import EditFeeder from "./edit-rst";
-// import EditPanel from "./editPanel";
+
 
 const TableData = [
   {
@@ -46,19 +44,6 @@ const TableData = [
 ];
 
 const ManageFeeder = ({ title }) => {
-  // const [isAddOpen, setIsAddOpen] = useState(false);
-  // const [isEditOpen, setIsEditOpen] = useState(false);
-  // const handleEditClick = () => {
-  //   setIsEditOpen(true);
-  // };
-  // const handleAddClick = () => {
-  //   setIsAddOpen(true);
-  // }
-  // const handleCloseClick = () => {
-  //   setIsEditOpen(false);
-  //   setIsAddOpen(false);
-  // };
-  // const [value, setValue] = useState("");
   const [subDivision, setSubDivision] = useState("");
   const [receivingStation, setReceivingStation] = useState([]);
   const [tableData, setTableData] = useState(TableData);
@@ -177,9 +162,6 @@ const ManageFeeder = ({ title }) => {
   return (
     <Layout title={title}>
       <div className="adding-feeder-container ">
-        {/* {isEditOpen && <EditPanel onClose={handleCloseClick} />}
-                                                                        {isAddOpen && <AddRST onClose={handleCloseClick} />}
-                                                                        {isEditOpen && <EditFeeder onClose={handleCloseClick} />} */}
         <div className="new-feeder-ddn ">
           <div style={{ marginLeft: "20px" }}>
             {" "}
@@ -230,24 +212,7 @@ const ManageFeeder = ({ title }) => {
               <option>Feeder1</option>
             </select>
           </div>
-          {/* <div style={{ marginLeft: "80px", marginRight: "50px" }}>
-                                                              <br />
-                                                            
-                                                              <button className='add-feeder-btn'
-                                                            onClick={handleAddClick}>
-                                                              Add New Feeder
-                                                           </button>
-                                                            </div> */}
         </div>
-
-        {/* <div>
-                                                              <a href="/receiving-station" style={{textDecoration:'none' }}>
-                                                                {" "}
-                                                                <button className="station-management-btn">
-                                                                  Manage Recieving Station{" "}
-                                                                </button>{" "}
-                                                              </a>
-                                                            </div> */}
       </div>
 
       <main>
