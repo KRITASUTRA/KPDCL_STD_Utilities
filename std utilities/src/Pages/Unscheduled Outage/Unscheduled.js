@@ -51,11 +51,11 @@ const Unscheduled = ({ title }) => {
         <div className="unsch-receiving-station">
         <div>
           <h3>Sub Division</h3>
-          <input placeholder="Srinagar" />
+          <input />
         </div>
         <div>
           <h3>Receiving Station</h3>
-          <input placeholder="Babar Shah" />
+          <input/>
           
         </div>
         <SwitchWithPopup isSwitchOn={isSwitchOn} onToggle={handleSwitchToggle} />
