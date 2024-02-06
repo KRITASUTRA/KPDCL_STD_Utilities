@@ -121,9 +121,9 @@ const PumpEnergy = ({ title }) => {
                     value={data.feeder}
                   >
                     <MenuItem disabled selected value=''>Select One</MenuItem>
-                    <MenuItem value={'Nai Sarak : F1'}>Nai Sarak : F1</MenuItem>
+                    {/*<MenuItem value={'Nai Sarak : F1'}>Nai Sarak : F1</MenuItem>
                     <MenuItem value={'Exchange : F5'}>Exchange : F5</MenuItem>
-                    <MenuItem value={'Barbarshah: F2'}>Barbarshah: F2</MenuItem>
+                <MenuItem value={'Barbarshah: F2'}>Barbarshah: F2</MenuItem>*/}
                   </Select>
                 </FormControl>
               </Stack>

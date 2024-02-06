@@ -9,7 +9,7 @@ const Log = ({title}) => {
     return (
         <Layout title={title}>
             <div className='h-full'>
-            <div className='mt-20' style={{marginTop:"7%"}}>
+            <div className='mt-20' >
                 <DD />
             </div>
             <div className='pt-14'>

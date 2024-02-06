@@ -188,9 +188,9 @@ function PumpEnergyTable({title}) {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
+              {/*<MenuItem value={'Srinagar'}>Srinagar</MenuItem>
               <MenuItem value={'Srinagar'}>Srinagar</MenuItem>
-              <MenuItem value={'Srinagar'}>Srinagar</MenuItem>
-              <MenuItem value={'Italy'}>Italy</MenuItem>
+        <MenuItem value={'Italy'}>Italy</MenuItem>*/}
             </Select>
           </FormControl>
          </div>
@@ -209,9 +209,9 @@ function PumpEnergyTable({title}) {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              <MenuItem value={'Ten'}>Ten</MenuItem>
+              {/*<MenuItem value={'Ten'}>Ten</MenuItem>
               <MenuItem value={'IN'}>IN</MenuItem>
-              <MenuItem value={'US'}>US</MenuItem>
+        <MenuItem value={'US'}>US</MenuItem>*/}
             </Select>
           </FormControl>
           </div>

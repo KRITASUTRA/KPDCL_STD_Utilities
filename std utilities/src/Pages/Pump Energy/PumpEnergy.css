@@ -14,15 +14,6 @@
 }
 
 .left-pump-form {
-  /* background-color: #fff;
-  padding: 20px;
-  width: 90%;
-  margin: 5vh ;
-  height: 63vh;
-  border-radius: 0.4rem;
-  border-collapse: collapse;
-  gap: 2%;
-   */
   overflow-x: auto;
   border-radius: 0.4rem;
   border: 1px solid #ddd;
@@ -92,8 +83,51 @@
 }
 
 .pump-feeder-select{
-  width: 150px;
+  width: auto;
   height: 40px;
   border-radius: 7px;
   border-width: initial;
+}
+
+@media screen and (max-width: 431px) and (min-width:375px){
+
+  .pump-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .left-pump-container{
+    width: 110%;
+  }
+  .pump-feeder-select{
+    width: auto;
+  }
+
+  .right-pump-container{
+    width: max-content;
+  }
+
+  .MuiPaper-root {
+    width: 100%;
+    margin: 0;
+    border-radius: 0; /* Remove border radius if needed */
+  }
+  .MuiTableContainer-root {
+    max-height: none;
+  }
+  .MuiTableCell-head {
+    padding: 15px 5px; /* Decrease padding for smaller screens */
+  }
+  .MuiTableCell-body {
+    padding: 5px 5px; /* Decrease padding for smaller screens */
+  }
+  .MuiTableContainer-root {
+    overflow-x: auto;
+  }
+  .MuiTypography-body {
+    font-size: 12px; /* Decrease font size for smaller screens */
+  }
+  .MuiTypography-h6 {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+
 }
