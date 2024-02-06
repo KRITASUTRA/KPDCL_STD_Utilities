@@ -72,7 +72,7 @@ const ManageFeeder = ({ title }) => {
               <option disabled selected value="">
                 -- Select One --
               </option>
-              <option>Feeder1</option>
+              <option></option>
             </select>
           </div>
         </div>
