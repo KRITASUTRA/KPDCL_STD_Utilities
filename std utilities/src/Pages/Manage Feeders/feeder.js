@@ -65,7 +65,7 @@ const ManageFeeder = ({ title }) => {
 
           <div style={{ marginLeft: "80px" }}>
             {" "}
-            Feeder
+            Feeder Name
             <br />
             <div className="Blank"></div>
             <select className="feeder-select">
@@ -96,8 +96,8 @@ const ManageFeeder = ({ title }) => {
                 <th>Name</th>
                 <th> Area</th>
                 <th>Number</th>
-                <th>Metered ?</th>
-                <th>Essential ?</th>
+                <th>Metered </th>
+                <th>Essential </th>
                 <th>Urban Share [%]</th>
                 <th>Rural Share [%]</th>
                 <th>Prime Month</th>

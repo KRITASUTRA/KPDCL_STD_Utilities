@@ -229,6 +229,7 @@
   .adding-feeder-container {
     margin-right: 10px;
     margin-top: 20px;
+    position: sticky;
   }
   .table-wrapper{
     display: flex;
@@ -239,11 +240,11 @@
   }
   .new-feeder-ddn {
     flex-direction: row;
-    width: 145%;
-    margin-left: 5%;
+    width: 100%;
+    margin-left: 0%;
     height: max-content;
     margin-top: 20%;
-    padding: 10px;
+    padding: 0px;
   }
 
   .feeder-select {
@@ -253,8 +254,13 @@
   .feederList-heading {
     flex-direction: row;
     align-items: center;
-    gap: 90%;
+    gap: 40%;
   }
+  .feederList-heading .list-heading{
+    margin-left: 5%;
+    font-weight: bold;
+  }
+  
   main{
     width: 100vw;
     padding:0;
