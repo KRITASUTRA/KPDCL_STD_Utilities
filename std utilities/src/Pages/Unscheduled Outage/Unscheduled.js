@@ -6,170 +6,16 @@ import { Button } from "@mui/material";
 import SwitchWithPopup from "./Switches/Switch1";
 
 const FeedersdefaultData = [
-  {
-    id: 1,
-    feeder_name: "Nai Sarak: F1",
-    description: "Nai sarak/Habba Kadal",
-    receivingStation: "Barbar Shah",
-  },
-  {
-    id: 2,
-    feeder_name: "Exchange: F5",
-    description: "Exchange & Government Press",
-    receivingStation: "Barbar Shah",
-  },
-  {
-    id: 3,
-    feeder_name: "Babarshah: F2",
-    description: "Babarshah",
-    receivingStation: "Barbar Shah",
-  },
-  {
-    id: 3,
-    feeder_name: "Babarshah: F2",
-    description: "Babarshah",
-    receivingStation: "Barbar Shah",
-  },
+  
 ];
 
 const mainTableData = [
-  {
-    id: 1,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 2,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 3,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 4,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 5,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 6,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 7,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 8,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 9,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 10,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
-  {
-    id: 11,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },  
-  {
-    id: 12,
-    OID: "2262146",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    duration: "5 mins",
-    reason: "Scheduled local containment",
-    offTime: "10:00",
-    onTime: "1:30",
-    entryTime: "2:10",
-  },
+ 
 ];
 
 const Unscheduled = ({ title }) => {
   const [isSwitchOn, setIsSwitchOn] = useState(true);
-  const [showPopup, setShowPopup] = useState(false); // State to control the popup
+  const [showPopup, setShowPopup] = useState(false); 
 
    const handleSwitchToggle = () => {
     setIsSwitchOn((prevSwitchState) => !prevSwitchState);
@@ -189,10 +35,17 @@ const Unscheduled = ({ title }) => {
       prevExpandedRow === id ? null : id
     );
   };
-  
+  const datasend={
+    feederName:'',
+    reason:'',
+    receivingStation:'',
+    rsid:'',
+ 
+  }
  
   return (
     <Layout title={title}>
+
       <div className="unsch-container">
         <div className="unsch-left-box">
         <div className="unsch-receiving-station">

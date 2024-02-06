@@ -17,94 +17,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { TimePicker } from "@mui/x-date-pickers";
 
 const mainTableData = [
-  {
-    id: 1,
-    OID: "BARBAR SHAH",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"SRINAGAR"
-  },
-  {
-    id: 1,
-    OID: "BASANT BAGH",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"SRINAGAR"
-  },
-  {
-    id: 1,
-    OID: "ADOORA",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"BARAMULLA"
-  },
-  {
-    id: 1,
-    OID: "ADOORA",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"SRINAGAR"
-  },
-  {
-    id: 1,
-    OID: "GAGANGEER",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"BARAMULLA"
-  },
-  {
-    id: 1,
-    OID: "GAGANGEER",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"BUDGAM"
-  },
-  {
-    id: 1,
-    OID: "GAGANGEER",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"SRINAGAR"
-  },
-  {
-    id: 1,
-    OID: "GAGANGEER",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"SRINAGAR"
-  },
-  {
-    id: 1,
-    OID: "GAGANGEER",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"SRINAGAR"
-  },
-  {
-    id: 1,
-    OID: "GAGANGEER",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"BUDGAM"
-  },
-  {
-    id: 1,
-    OID: "GAGANGEER",
-    feeder_name: "Nai Sarak: F1",
-    date: "12/12/2023",
-    unit: "5 W",
-    sd:"SRINAGAR"
-  },
+  
 ];
 
 const PumpEnergy = ({ title }) => {
@@ -133,15 +46,7 @@ const PumpEnergy = ({ title }) => {
   const [receivingStation, setReceivingStation] = useState([]);
 
   const receivingStations = {
-    'SRINAGAR' : ['BARBAR SHAH ','BASANT BAGH','BREINE','BUCHWARA','CENTAUR','FATEH KADAL','HARWAN','KAWDARA','KHAYAM','MUGHAL MASJID','NEDOUS','NISHAT','SHALIMAR',
-                  'TRC','BADAMIBAGH'],
-    'BUDGAM' : ['B. K. PORA','BEERWAH','BRANWAR','BUDGAM','CHADOORA','CHARARISHAREEF','ICHGAM','KANIR','KHAG','KHAN SAHIB','KHANDA','KREMSHORE'],
-    'KUPWARA' :['ADOORA', 'CHOGUL', 'DRUGMULLA', 'GANAPORA','HANDWARA','KHUMRIYAL', 'KRALPORA', 'KRUSEN', 'LASSIPORA SOGAM', 'MAGAM (KUPWARA) ', 'TANGDHAR'],
-    'BARAMULLA' :['ARAMPORA','BARAMULLA-I','BASE STATION','BARAMULLA - II','BONIYAR','CHAKLOO','CHANDOOSA'],
-    'BANDIPORA' : ['AJAR','AJAS','ALOOSA','HAJIN','MANASBAL (SAFAPORA)','MARKUNDAL','NADIHAL','NAIDKHAI','PANZIGAM','PRENG MADHWAN','SHADIPORA',],
-    'GANDERBAL' : ['ALASTENG','DOODERHAMA','GAGANGEER','GANDASINGH','KANGAN','KANGAN OF PDC','KHEER- BHAWANI','KURHAMA','LAR'],
-    'ANANTNAG' : ['AISHMUQAM','AKURA','ASHAJIPORA','DIALGAM','DOORU-SOUTH','GOPALPORA','HARNAG','HILLER-BAHI','HILLER-DOORU','HUTMURA','JANGLATMANDI (BRAKPORA)','KHIRAM','KOKERNAG'],
-    'KULGAM' : ['KULGAM','NILLOW', 'QAIMOH', 'YARIPORA', 'BEHIBAGH','KEELAM','Rembhama','CHOWGAM', 'Safalpora']
+    
   };
 
   const handleSubDivisionChange = (e) => {
@@ -222,29 +127,7 @@ const PumpEnergy = ({ title }) => {
                   </Select>
                 </FormControl>
               </Stack>
-              {/* <Stack width={"40%"}>
-                <InputLabel>Month and Year</InputLabel>
-                <Stack direction="row" spacing={1} width={"100%"}>
-                  <Stack width={"45%"}>
-                    <FormControl fullWidth>
-                      <Select onChange={handleChange} style={{borderRadius:'10px', height:'60%'}}>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </Stack>
-                  <Stack width={"40%"}>
-                    <FormControl fullWidth>
-                      <Select onChange={handleChange} style={{borderRadius:'10px', height:'60%'}}>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </Stack>
-                </Stack>
-              </Stack> */}
+             
               <Stack width={"40%"}>
                 <InputLabel>Date</InputLabel>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -283,32 +166,7 @@ const PumpEnergy = ({ title }) => {
               </Stack>
             </Stack>
 
-            {/* <Stack direction="row" spacing={6}>
-                                                                            
-                                                                              <Stack width={"40%"}>
-                                                                                <InputLabel>Time</InputLabel>
-                                                                                <Stack direction="row" spacing={1}>
-                                                                                  <Stack>
-                                                                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                                                                      <TimePicker 
-                                                                                        sx={{
-                                                                                          borderRadius: 8, // Set the desired border-radius value
-                                                                                        }}
-                                                                                      />
-                                                                                    </LocalizationProvider>
-                                                                                  </Stack>
-                                                                                  <Stack>
-                                                                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                                                                      <TimePicker 
-                                                                                        sx={{
-                                                                                          borderRadius: 8, // Set the desired border-radius value
-                                                                                        }}
-                                                                                      />
-                                                                                    </LocalizationProvider>{" "}
-                                                                                  </Stack>
-                                                                                </Stack>
-                                                                              </Stack>
-                                                                            </Stack> */}
+           
 
             <Stack width={120} margin={"20px auto 0 auto"}>
               <Button variant="contained" onClick={handleClick}>Submit</Button>

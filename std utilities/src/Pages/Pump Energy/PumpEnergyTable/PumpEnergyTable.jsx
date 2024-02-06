@@ -66,19 +66,7 @@ function createData(date, code, population, size) {
 }
 
 const rows = [
-  createData('12-12-2023',"India", "IN", 12-12-2023, 12-12-2023),
-  createData('12-08-2023',"Srinagar", "Ten", 12-12-2023, 9596961),
-  createData('04-08-2023',"Italy", "Ten", 60483973, 301340),
-  createData('29-07-2023',"United States", "US", 327167434, 9833520),
-  createData('15-07-2023',"Canada", "CA", 37602103, 9984670),
-  createData('02-07-2023',"Australia", "AU", 25475400, 7692024),
-  createData('24-06-2023',"Germany", "DE", 83019200, 357578),
-  createData('24-06-2023',"Ireland", "IE", 4857000, 70273),
-  createData('20-06-2023',"Mexico", "MX", 126577691, 1972550),
-  createData('20-06-2023',"Japan", "JP", 126317000, 377973),
-  createData('16  -05-2023',"France", "FR", 67022000, 640679),
-  createData('05-05-2023',"United Kingdom", "GB", 67545757, 242495),
-  createData('01-05-2023',"Russia", "RU", 146793744, 17098246),
+  
 ];
 
 function PumpEnergyTable({title}) {

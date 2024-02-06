@@ -1,46 +1,11 @@
-import { IonIcon } from "@ionic/react";
 import React, { useState } from "react";
-import { create, menu, person, search, trash } from "ionicons/icons";
 import "./Manage-feeder.css";
 import "./manageFeeder.css";
-import FileSaver from "file-saver";
 import Layout from "../../Components/Layout/Layout";
 
 
 const TableData = [
-  {
-    id: 1,
-    name: "Nai Sarak : F1	",
-    area: "Nai Sarak / Habba Kadal	",
-    number: "F1",
-    metered: "true",
-    essential: "false",
-    urban: "0",
-    rural: "0",
-    prime: "2019-03-01",
-  },
-  {
-    id: 2,
-    name: "Zabarwan Park	",
-    area: "Zabarwan Park		",
-    number: "F4",
-    metered: "true",
-    essential: "true",
-    urban: "0",
-    rural: "0",
-    prime: "2020-03-01",
-  },
-  {
-    id: 3,
-    name: "Nai Sarak : F1	",
-    area: "Nai Sarak / Habba Kadal	",
-    number: "F1",
-    metered: "true",
-    essential: "false",
-    urban: "0",
-    rural: "0",
-    prime: "2019-03-01",
-  },
+  
 ];
 
 const ManageFeeder = ({ title }) => {
@@ -49,109 +14,7 @@ const ManageFeeder = ({ title }) => {
   const [tableData, setTableData] = useState(TableData);
 
   const receivingStations = {
-    SRINAGAR: [
-      "BARBAR SHAH ",
-      "BASANT BAGH",
-      "BREINE",
-      "BUCHWARA",
-      "CENTAUR",
-      "FATEH KADAL",
-      "HARWAN",
-      "KAWDARA",
-      "KHAYAM",
-      "MUGHAL MASJID",
-      "NEDOUS",
-      "NISHAT",
-      "SHALIMAR",
-      "TRC",
-      "BADAMIBAGH",
-    ],
-    BUDGAM: [
-      "B. K. PORA",
-      "BEERWAH",
-      "BRANWAR",
-      "BUDGAM",
-      "CHADOORA",
-      "CHARARISHAREEF",
-      "ICHGAM",
-      "KANIR",
-      "KHAG",
-      "KHAN SAHIB",
-      "KHANDA",
-      "KREMSHORE",
-    ],
-    KUPWARA: [
-      "ADOORA",
-      "CHOGUL",
-      "DRUGMULLA",
-      "GANAPORA",
-      "HANDWARA",
-      "KHUMRIYAL",
-      "KRALPORA",
-      "KRUSEN",
-      "LASSIPORA SOGAM",
-      "MAGAM (KUPWARA) ",
-      "TANGDHAR",
-    ],
-    BARAMULLA: [
-      "ARAMPORA",
-      "BARAMULLA-I",
-      "BASE STATION",
-      "BARAMULLA - II",
-      "BONIYAR",
-      "CHAKLOO",
-      "CHANDOOSA",
-    ],
-    BANDIPORA: [
-      "AJAR",
-      "AJAS",
-      "ALOOSA",
-      "HAJIN",
-      "MANASBAL (SAFAPORA)",
-      "MARKUNDAL",
-      "NADIHAL",
-      "NAIDKHAI",
-      "PANZIGAM",
-      "PRENG MADHWAN",
-      "SHADIPORA",
-    ],
-    GANDERBAL: [
-      "ALASTENG",
-      "DOODERHAMA",
-      "GAGANGEER",
-      "GANDASINGH",
-      "KANGAN",
-      "KANGAN OF PDC",
-      "KHEER- BHAWANI",
-      "KURHAMA",
-      "LAR",
-    ],
-    ANANTNAG: [
-      "AISHMUQAM",
-      "AKURA",
-      "ASHAJIPORA",
-      "DIALGAM",
-      "DOORU-SOUTH",
-      "GOPALPORA",
-      "HARNAG",
-      "HILLER-BAHI",
-      "HILLER-DOORU",
-      "HUTMURA",
-      "JANGLATMANDI (BRAKPORA)",
-      "KHIRAM",
-      "KOKERNAG",
-    ],
-    KULGAM: [
-      "KULGAM",
-      "NILLOW",
-      "QAIMOH",
-      "YARIPORA",
-      "BEHIBAGH",
-      "KEELAM",
-      "Rembhama",
-      "CHOWGAM",
-      "Safalpora",
-    ],
+    
   };
 
   const handleSubDivisionChange = (e) => {
