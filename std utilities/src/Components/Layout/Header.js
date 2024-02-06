@@ -18,6 +18,7 @@ const Navbar = styled(AppBar)`
   background-color: white;
   display: flex;
   height: 67px;
+  
 `;
 
 const Heading = styled(Typography)`
@@ -25,6 +26,9 @@ const Heading = styled(Typography)`
   font-weight: 500;
   font-size: 28px;
   color: black;
+  @media (max-width: 600px) {
+    font-size: 15px;
+  }
 `;
 
 const ArrowBack = styled(ArrowBackIcon)`
