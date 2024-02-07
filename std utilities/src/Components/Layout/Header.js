@@ -18,7 +18,6 @@ const Navbar = styled(AppBar)`
   background-color: white;
   display: flex;
   height: 67px;
-  
 `;
 
 const Heading = styled(Typography)`
@@ -27,7 +26,7 @@ const Heading = styled(Typography)`
   font-size: 28px;
   color: black;
   @media (max-width: 600px) {
-    font-size: 15px;
+    font-size: 20px;
   }
 `;
 
@@ -51,15 +50,16 @@ const Header = ({ title, showBackButton }) => {
     } else {
       navigate("/");
     }
-    showBackButton = false;
-};
+    // Avoid mutating props directly. This line should be removed.
+    // showBackButton = false;
+  };
 
   return (
     <Navbar>
       <Toolbar>
         {showBackButton ? (
-          <IconButton  onClick={handleBack}>
-            <ArrowBack color="#000000"/>
+          <IconButton onClick={handleBack}>
+            <ArrowBack color="#000000" />
           </IconButton>
         ) : (
           <LeftDrawer />

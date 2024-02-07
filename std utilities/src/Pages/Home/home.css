@@ -1,36 +1,63 @@
-/* Add some basic styling to the tabs container */
 .tabs-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* create two columns of equal width */
-    grid-gap: 40px; /* add some space between the tabs */
-    margin: 20px; /* add some margin around the container */
-    align-items: center; /* center the tabs vertically */
-    justify-items: center; /* center the tabs horizontally */
-    padding: 100px 400px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: min-content;
+  flex-wrap: wrap;
+  gap: 180%;
+  margin-left: 10%;
+}
 
-  @media screen and (max-width: 431px) and (min-width:375px) {
-    /* Styles for mobile devices */
-    .tabs-container {
-      margin: 10px;
-    }
-    .tabs-container select {
-      font-size: 14px;
-      color: blue;
-    }
+/* Styles for individual tab buttons */
+.MuiButtonBase-root.MuiTab-root {
+  padding: 60px;
+  background-color: rgba(147, 193, 222, 0.8);
+  border-radius: 10px;
+  color: black;
+}
+
+/* Styles for list items inside the tab container */
+.tabs-container li {
+  font-size: 18px;
+  color: red;
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 426px) {
+  .tabs-container {
+    gap: 0%;
+    margin-left: 0%;
+    flex-direction: inherit;
   }
   
-  @media (min-device-width: 431px) and (max-device-width: 768px) {
-    /* Styles for tablet devices */
-    .tabs-container {
-      margin: 15px;
-    }
-    .tabs-container ul {
-      display: flex;
-      justify-content: space-around;
-    }
-    .tabs-container li {
-      font-size: 16px;
-      color: green;
-    }
+  /* Styles for individual tab buttons */
+  .MuiButtonBase-root.MuiTab-root {
+    padding: 0px;
+    background-color: rgba(147, 193, 222, 0.8);
+    border-radius: 10px;
+    color: black;
   }
+}
+
+/* Responsive styles for tablet devices */
+@media screen and (max-width: 769px) {
+  .tabs-container {
+    gap: 80%;
+    margin-left: 0%;
+  }
+  
+  /* Styles for individual tab buttons */
+  .MuiButtonBase-root.MuiTab-root {
+    padding: 10px 10px;
+    background-color: rgba(147, 193, 222, 0.8);
+    border-radius: 10px;
+    color: black;
+  }
+  
+  /* Styles for list items inside the tab container */
+  .tabs-container li {
+    font-size: 18px;
+    color: red;
+  }
+}
