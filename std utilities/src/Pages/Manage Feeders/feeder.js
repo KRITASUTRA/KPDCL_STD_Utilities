@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import "./Manage-feeder.css";
 import "./manageFeeder.css";
 import Layout from "../../Components/Layout/Layout";
-
+import Dropdown from "../../Components/Layout/selectDrops";
 
 const TableData = [
   
 ];
 
 const ManageFeeder = ({ title }) => {
-  const [subDivision, setSubDivision] = useState("");
-  const [receivingStation, setReceivingStation] = useState([]);
+  const [subDivision, setSubDivision] = React.useState(null);
+  const [receivingStation, setReceivingStation] = React.useState(null);
+  const [selectedFeeder, setSelectedFeeder] = React.useState(null);
   const [tableData, setTableData] = useState(TableData);
 
   const receivingStations = {
@@ -21,14 +22,19 @@ const ManageFeeder = ({ title }) => {
     setSubDivision(e.target.value);
     setReceivingStation(receivingStations[e.target.value]);
   };
+  const subdivisionItems = [''];
+  const receivingStationItems = [''];
+  const feederItems = [''];
 
   return (
     <Layout title={title}>
-      <div className="adding-feeder-container ">
-        <div className="new-feeder-ddn ">
-          <div style={{ marginLeft: "20px" }}>
+    <div className="bg-gray-50 p-6 mx-5 mt-20 md:mx-auto md:max-w-xl lg:max-w-2xl xl:max-w-6xl lg:ml-16  lg:mt-28">
+
+      {/* 
+        <div className="new-feeder-ddn  justify-center items-center">
+          <div className="      flex-col">
             {" "}
-            Sub Division <br />
+            <div>Sub Division </div>
             <div className="Blank"></div>
             <select
               className="feeder-select"
@@ -46,9 +52,10 @@ const ManageFeeder = ({ title }) => {
             </select>
           </div>
 
-          <div style={{ marginLeft: "80px" }}>
+          <div className="      flex-col">
             {" "}
-            Recieving Station <br />
+            <div>
+            Recieving Station </div>
             <div className="Blank"></div>
             <select className="feeder-select">
               <option disabled selected value="">
@@ -63,7 +70,7 @@ const ManageFeeder = ({ title }) => {
             </select>
           </div>
 
-          <div style={{ marginLeft: "80px" }}>
+          <div className="     flex-col">
             {" "}
             Feeder Name
             <br />
@@ -75,19 +82,56 @@ const ManageFeeder = ({ title }) => {
               <option></option>
             </select>
           </div>
+        </div>*/}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="flex flex-col items-center justify-center">
+        <div className='text-black text-sm font-medium mb-2'>
+            Sub Division 
         </div>
+        <Dropdown
+            label="Select One"
+            items={subdivisionItems}
+            onSelect={(item) => setSubDivision(item)}
+        />
+    </div>
+    <div className="flex flex-col items-center justify-center">
+        <div className='text-black text-sm font-medium mb-2'>
+            RECEIVING STATION
+        </div>
+        <Dropdown
+            label="Select One "
+            items={receivingStationItems}
+            onSelect={(item) => setReceivingStation(item)}
+        />
+    </div>
+    <div className="flex flex-col items-center justify-center">
+        <div className='text-black text-sm font-medium mb-2'>
+            FEEDER
+        </div>
+        <Dropdown
+            label="Select One"
+            items={feederItems}
+            onSelect={(item) => setSelectedFeeder(item)}
+        />
+    </div>
+</div>
+
+
       </div>
 
       <main>
-        <div className="feederList-heading">
-          <div className="list-heading">
-            {" "}
-            <h3> Feeder List </h3>{" "}
-          </div>
-          <div>
-            <button className="download-btn">Download</button>
-          </div>
-        </div>
+      <div class="feederList-heading flex flex-col sm:flex-row items-center justify-between">
+      <div class="list-heading">
+          <h3>Feeder List</h3>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-center mt-5 ">
+
+          <button class="bg-blue-500 text-white text-sm font-normal py-2 px-5 mb-5 sm:mr-5 border border-blue-500 rounded">
+              Download
+          </button>
+      </div>
+  </div>
+  
         <div className='table-wrapper' style={{ marginLeft: 65 }}>
           <table>
             <thead>

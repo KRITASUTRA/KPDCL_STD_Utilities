@@ -20,7 +20,8 @@
   border-radius: 10px;
   background-color: #ffffff;
   margin-left: 55px;
-  width: 72vw ;
+  
+  width: auto ;
 }
 
 .Blank{
@@ -36,7 +37,8 @@
 
 .feederList-heading{
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
+    width: 100%;
 }
 
 .list-heading{
@@ -188,17 +190,17 @@
 
 
   /* Responsive styles for tablet view */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   .adding-feeder-container {
     flex-direction: column;
     margin-right: 20px;
     margin-top: 40px;
     margin-left: 5%;
-    width: auto;
+    
   }
 
   .new-feeder-ddn {
-    width: 100%;
+    width: auto;
     margin-left: 0;
     margin-top: 8%;
   }
@@ -239,22 +241,23 @@
     align-self: center;
   }
   .new-feeder-ddn {
-    flex-direction: row;
-    width: 100%;
-    margin-left: 0%;
+    flex-direction: column; 
+    background-color: #ecf2f5; 
+    border: none;
+    align-content: center;
     height: max-content;
     margin-top: 20%;
     padding: 5px;
   }
 
   .feeder-select {
-    width: 100%;
+    width: 220%;
   }
 
   .feederList-heading {
     flex-direction: row;
     align-items: center;
-    gap: 40%;
+    
   }
   .feederList-heading .list-heading{
     margin-left: 5%;
@@ -266,7 +269,7 @@
     padding:0;
   }
   .download-btn {
-    margin-left: 0;
+    margin-left: auto;
     margin-top: 10px;
   }
   th{

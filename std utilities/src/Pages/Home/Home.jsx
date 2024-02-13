@@ -21,84 +21,32 @@ const Home = ({ title }) => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
+        className='md:pt-64 pt-20' 
       >
-        <div className="tabs-container">
+        <div className="flex flex-col justify-center gap-5 md:flex-row sm:flex-col items-center mt-5 p-8 ">
           <Link to="/feeder-management">
-            <Tab  style={{
-              marginTop: 200,
-              marginBottom: 200,
-              padding: '60%',
-              backgroundColor: 'rgba(255,255,255,0.8)',
-              borderRadius: '10px',
-              ...(window.innerWidth < 769 && { /* Adjust styles for screens smaller than 768px */
-                padding: '5%', // Adjusted padding for smaller screens
-                backgroundColor: 'rgba(255,255,255,0.5)', // Adjusted background color for smaller screens
-              }),
-              ...(window.innerWidth < 426 && { /* Adjust styles for screens smaller than 426px */
-                padding: '0%',gap:0 // Further adjusted padding for even smaller screens
-              })
-            }} 
+            <Tab className="tabs" 
               label="Feeder Management"
               active={activeTab === "Feeder Management"}
               onClick={() => handleTabClick("Feeder Management")}
             />
           </Link>
           <Link to="/pump-energy">
-            <Tab  style={{
-              marginTop: 200,
-              marginBottom: 200,
-              padding: '60%',
-              backgroundColor: 'rgba(255,255,255,0.8)',
-              borderRadius: '10px',
-              ...(window.innerWidth < 769 && { /* Adjust styles for screens smaller than 768px */
-                padding: '5%', // Adjusted padding for smaller screens
-                backgroundColor: 'rgba(255,255,255,0.5)', // Adjusted background color for smaller screens
-              }),
-              ...(window.innerWidth < 426 && { /* Adjust styles for screens smaller than 426px */
-                padding: '0%',gap:0 // Further adjusted padding for even smaller screens
-              })
-            }}
+            <Tab  
               label="Pump Energy"
               active={activeTab === "Pump Energy"}
               onClick={() => handleTabClick("Pump Energy")}
             />
           </Link>
           <Link to="/scheduled-outage">
-          <Tab
-          style={{
-            marginTop: 200,
-            marginBottom: 200,
-            padding: '60%',
-            backgroundColor: 'rgba(255,255,255,0.8)',
-            borderRadius: '10px',
-            ...(window.innerWidth < 769 && { /* Adjust styles for screens smaller than 768px */
-              padding: '5%', // Adjusted padding for smaller screens
-              backgroundColor: 'rgba(255,255,255,0.5)', // Adjusted background color for smaller screens
-            }),
-            ...(window.innerWidth < 426 && { /* Adjust styles for screens smaller than 426px */
-              padding: '0%',gap:0, // Further adjusted padding for even smaller screens
-            })
-          }}
-          label="Scheduled Outage"
-          active={activeTab === "Scheduled Outage"}
-          onClick={() => handleTabClick("Scheduled Outage")}
-        />
+            <Tab
+              label="Scheduled Outage"
+              active={activeTab === "Scheduled Outage"}
+              onClick={() => handleTabClick("Scheduled Outage")}
+            />
           </Link>
           <Link to="/unscheduled-outage">
-            <Tab  style={{
-              marginTop: 200,
-              marginBottom: 200,
-              padding: '60%',
-              backgroundColor: 'rgba(255,255,255,0.8)',
-              borderRadius: '10px',
-              ...(window.innerWidth < 769 && { /* Adjust styles for screens smaller than 768px */
-                padding: '5%', // Adjusted padding for smaller screens
-                backgroundColor: 'rgba(255,255,255,0.5)', // Adjusted background color for smaller screens
-              }),
-              ...(window.innerWidth < 426 && { /* Adjust styles for screens smaller than 426px */
-                padding: '0%',gap:0, // Further adjusted padding for even smaller screens
-              })
-            }}
+            <Tab
               label="Unscheduled Outage"
               active={activeTab === "Unscheduled Outage"}
               onClick={() => handleTabClick("Unscheduled Outage")}

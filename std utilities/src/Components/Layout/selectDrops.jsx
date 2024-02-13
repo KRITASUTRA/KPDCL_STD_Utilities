@@ -31,12 +31,12 @@ const Dropdown = ({ label, items, onSelect }) => {
                     ref={buttonRef}
                     id="dropdownDefaultButton"
                     onClick={toggleDropdown}
-                    className="text-blue-500 bg-blue-100 border border-gray-300 border-r-0 focus:outline-none focus:ring-none font-medium rounded text-sm pl-4 pr-8 py-2 text-center inline-flex items-center focus:border-none"
+                    className="text-black  bg-white border border-gray-300  focus:outline-none focus:ring-none font-medium rounded text-sm pl-4 pr-8 py-2 text-center inline-flex items-center focus:border-none lg:w-60"
                     type="button"
                 >
                     {selectedItem || label}
                 </button>
-                <span><RiArrowDownSLine className="w-4 h-4 text-blue-500 -ml-6" onClick={toggleDropdown} /></span>
+                <span><RiArrowDownSLine className="w-4 h-4  text-black -ml-6" onClick={toggleDropdown} /></span>
             </div>
 
 

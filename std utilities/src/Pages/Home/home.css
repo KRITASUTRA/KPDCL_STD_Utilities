@@ -1,20 +1,22 @@
 .tabs-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   width: min-content;
   flex-wrap: wrap;
-  gap: 180%;
+  gap: 100%;
   margin-left: 10%;
+  top: 50%;
 }
 
 /* Styles for individual tab buttons */
 .MuiButtonBase-root.MuiTab-root {
   padding: 60px;
-  background-color: rgba(147, 193, 222, 0.8);
+  background-color: #69686D;
   border-radius: 10px;
-  color: black;
+  color: white;
+  font-weight: bold;
 }
 
 /* Styles for list items inside the tab container */
@@ -23,17 +25,18 @@
   color: red;
 }
 
+
 /* Responsive styles for mobile devices */
 @media screen and (max-width: 426px) {
   .tabs-container {
     gap: 0%;
     margin-left: 0%;
-    flex-direction: inherit;
+    
   }
   
   /* Styles for individual tab buttons */
   .MuiButtonBase-root.MuiTab-root {
-    padding: 0px;
+    padding: 5px;
     background-color: rgba(147, 193, 222, 0.8);
     border-radius: 10px;
     color: black;
@@ -41,15 +44,15 @@
 }
 
 /* Responsive styles for tablet devices */
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1024px) { /* Adjusted for tablet devices */
   .tabs-container {
-    gap: 80%;
+    gap: 20%; /* Adjust gap for different tablet sizes */
     margin-left: 0%;
   }
   
   /* Styles for individual tab buttons */
   .MuiButtonBase-root.MuiTab-root {
-    padding: 10px 10px;
+    padding: 40px;
     background-color: rgba(147, 193, 222, 0.8);
     border-radius: 10px;
     color: black;

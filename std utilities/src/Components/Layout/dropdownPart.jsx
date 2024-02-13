@@ -12,7 +12,7 @@ const DD = () => {
     const [selectedFeeder, setSelectedFeeder] = React.useState(null);
 
     return (
-        <div className="grid grid-cols-1 mt-6 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid grid-cols-1 mt-32 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
             <div className="flex flex-col items-center justify-center">
                 <div className='text-black text-sm font-medium mb-2'>
                     SELECT SUBDIVISION:

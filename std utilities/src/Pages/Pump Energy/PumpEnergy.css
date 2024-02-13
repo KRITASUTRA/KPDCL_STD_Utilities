@@ -89,6 +89,39 @@
   border-width: initial;
 }
 
+@media screen and (max-width: 840px) and (min-width:375px){
+
+  .pump-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+  }
+  .left-pump-container{
+    width: 100%;
+  }
+  .pump-feeder-select{
+    width: auto;
+  }
+
+  .left-pump-form{
+    margin-top: auto;
+  }
+
+  .right-pump-container{
+    width: max-content;
+    margin:  15vh 5vh;
+  }
+
+  .MuiPaper-root {
+    width: 100%;
+    margin: 0;
+    border-radius: 0; 
+  }
+  
+
+}
+
+
 @media screen and (max-width: 431px) and (min-width:375px){
 
   .pump-container{

@@ -84,7 +84,8 @@ const PumpEnergy = ({ title }) => {
     <Layout title={title}>
       <div className="pump-container">
         <div className="left-pump-container">
-          <Stack className="left-pump-form">
+          <Stack className="left-pump-form "
+          >
             <Stack direction="row" spacing={6} marginBottom={0}>
               <Stack width={"40%"}>
                 <InputLabel style={{ marginBottom: "2px" }}>
